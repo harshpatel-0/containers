@@ -1,0 +1,4 @@
+Flask==2.3.3
+flask-restx==1.2.0
+Jinja2
+boto3==1.34.9

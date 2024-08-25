@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Uploaded Images</title>
+</head>
+<body>
+    <a href="/">Home</a>
+    <h1>Files uploaded successfully!</h1>
+    <table border="1">
+        <tr>
+            <th>File Name</th>
+            <th>Size (Bytes)</th>
+            <th>Last Modified</th>
+        </tr>
+        {% for file in files %}
+        <tr>
+            <td>
+                {% if file.Key.endswith(('.png', '.jpg', '.jpeg', '.gif')) %}
+                <a href="/files/{{ file.Key }}" target="_blank">{{ file.Key }}</a>
+                {% else %}
+                {{ file.Key }}
+                {% endif %}
+            </td>
+            <td>{{ file.Size }}</td>
+            <td>{{ file.LastModified }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
