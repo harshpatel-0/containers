@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>View Image</title>
+</head>
+<body>
+    <a href="/files">Back</a>
+    {% if url %}
+        <img src="{{ url }}" alt="Uploaded photo" style="max-width: 100%; height: auto;">
+        <br>
+
+    {% endif %}
+</body>
+</html>
